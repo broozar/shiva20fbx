@@ -1,0 +1,17 @@
+<module name="FBX Importer" icon="FBX ImporterIcon" >    
+
+    <!-- INFO -->
+    <author name="Felix Caffier" email="support@shiva-engine.com" website="trisymphony.com"/>
+    <description text="Common file type converter (3ds, obj, fbx) to DAE based on the Autodesk FBX SDK."/>
+
+    <!-- COMMON -->
+    <depend  module="com.shiva.editor.common" />
+    <include file="/com.shiva.editor.common/guiexAPI.xml"/>
+
+    <!-- INCLUDES -->
+    <include file="resources/resources.xml"/>
+    <include file="views/mainView/mainView.xml" />   
+
+
+    
+</module>

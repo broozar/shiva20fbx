@@ -1,0 +1,35 @@
+<resources>
+
+    <icon id="FBX ImporterIcon">
+        <pixmap mode="normal"       state="off"   file="ffbx_16.png" />
+        <pixmap mode="normal"       state="on"    file="ffbx_16hi.png" />
+        <pixmap mode="selected"     state="off"   file="ffbx_16hi.png" />
+        <pixmap mode="selected"     state="on"    file="ffbx_16hi.png" />
+        <pixmap mode="active"       state="off"   file="ffbx_16.png" />
+        <pixmap mode="active"       state="on"    file="ffbx_16hi.png" />
+        <pixmap mode="disabled"     state="off"   file="ffbx_16.png" />
+        <pixmap mode="disabled"     state="on"    file="ffbx_16.png" />
+
+        <pixmap mode="normal"       state="off"   file="ffbx_32.png" />
+        <pixmap mode="normal"       state="on"    file="ffbx_32hi.png" />
+        <pixmap mode="selected"     state="off"   file="ffbx_32hi.png" />
+        <pixmap mode="selected"     state="on"    file="ffbx_32hi.png" />
+        <pixmap mode="active"       state="off"   file="ffbx_32.png" />
+        <pixmap mode="active"       state="on"    file="ffbx_32hi.png" />
+        <pixmap mode="disabled"     state="off"   file="ffbx_32.png" />
+        <pixmap mode="disabled"     state="on"    file="ffbx_32.png" />
+
+        <pixmap mode="normal"       state="off"   file="ffbx_64.png" />
+        <pixmap mode="normal"       state="on"    file="ffbx_64hi.png" />
+        <pixmap mode="selected"     state="off"   file="ffbx_64hi.png" />
+        <pixmap mode="selected"     state="on"    file="ffbx_64hi.png" />
+        <pixmap mode="active"       state="off"   file="ffbx_64.png" />
+        <pixmap mode="active"       state="on"    file="ffbx_64hi.png" />
+        <pixmap mode="disabled"     state="off"   file="ffbx_64.png" />
+        <pixmap mode="disabled"     state="on"    file="ffbx_64.png" />
+    </icon>
+     
+</resources>
+
+
+
