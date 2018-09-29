@@ -36,5 +36,9 @@ No mac build available yet. Once there is:
 Copy module/com.tris.fbximport to ~/Library/Application Support/ShiVa/Editor/Modules
 
 ## Linux
+<<<<<<< HEAD
 No mac build available yet. Once there is:  
 Copy module/com.tris.fbximport to ~/.ShiVa/Editor/Modules
+=======
+Copy module/com.tris.fbximport to ~/.shiva/ShiVa/Editor/Modules
+>>>>>>> 70028f15df6958bccb589495af88a0cbc8d2a4fb
