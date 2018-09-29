@@ -77,13 +77,37 @@ end
 
 function onMainViewInit ( )
 
-    local libinit, libmsg = package.loadlib( module.getRootDirectory ( this.getModule() ) .."resources/ffbx.dll", "libinit" )
-    log.message("Loading FFBX DLL")
-    if libinit == nil then
-        log.warning ( "FFBX error: " ..libmsg )
-    else
-        libinit()
-    end
+	if system.getOSType ( ) == system.kOSTypeWindows then
+		local libinit, libmsg = package.loadlib( module.getRootDirectory ( this.getModule() ) .."resources/ffbx.dll", "libinit" )
+		log.message("Loading FFBX DLL")
+		if libinit == nil then
+			log.warning ( "FFBX error: " ..libmsg )
+		else
+			libinit()
+		end
+
+	elseif system.getOSType ( ) == system.kOSTypeLinux then
+		local libinit, libmsg = package.loadlib( module.getRootDirectory ( this.getModule() ) .."resources/libffbx.so", "libinit" )
+		log.message("Loading FFBX SO")
+		if libinit == nil then
+			log.warning ( "FFBX error: " ..libmsg )
+		else
+			libinit()
+		end
+	
+	elseif system.getOSType ( ) == system.kOSTypeMac then
+		local libinit, libmsg = package.loadlib( module.getRootDirectory ( this.getModule() ) .."resources/libffbx.dylib", "libinit" )
+		log.message("Loading FFBX DYLIB")
+		if libinit == nil then
+			log.warning ( "FFBX error: " ..libmsg )
+		else
+			libinit()
+		end
+	
+	else
+		log.warning ( "FFBX error: Operating system not recognized. FBX module will not be available." )
+		
+	end
 
 
     -- prepare combo boxes
@@ -165,7 +189,7 @@ function onConfigLoad ( )
 
     local bExpMat = project.getUserProperty ( nil, sMID ..".config.ffbx.export.material" )
     local bExpTex = project.getUserProperty ( nil, sMID ..".config.ffbx.export.texture" )
-    local bExpLnk = project.getUserProperty ( nil, sMID ..".config.ffbx.export.embed" )
+    local bExpEmb = project.getUserProperty ( nil, sMID ..".config.ffbx.export.embed" )
     local bExpShp = project.getUserProperty ( nil, sMID ..".config.ffbx.export.shape" )
     local bExpAni = project.getUserProperty ( nil, sMID ..".config.ffbx.export.animation" )
     local bExpGlo = project.getUserProperty ( nil, sMID ..".config.ffbx.export.global" )
@@ -421,14 +445,16 @@ function onExportFBX ( )
     if bOutClr == 1 then
 
         local r = system.findFiles ( sOutPat, false )
-        for i=1, #r do
-            local e = project.getFileExtension ( r[i] )
-            if string.lower ( e ) == "dae" then
-                log.message ( "FFBX: deleting " ..sOutPat .."/" ..project.getFileFullName ( r[i] ) )
-                project.destroyFile ( r[i] )
+        if (r) then
+            for i=1, #r do
+                local e = project.getFileExtension ( r[i] )
+                if string.lower ( e ) == "dae" then
+                    log.message ( "FFBX: deleting " ..sOutPat .."/" ..project.getFileFullName ( r[i] ) )
+                    project.destroyFile ( r[i] )
+                end
             end
         end
-
+		
     end
 
     -- send options to DLL

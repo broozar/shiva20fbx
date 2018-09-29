@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1538223473 source:/STORAGE/Programming/shivaStorageProjects/ffbx/ffbx.cpp
+	"ffbx.h"
+
+1538142579 /STORAGE/Programming/shivaStorageProjects/ffbx/ffbx.h
+	"fbxsdk.h"
+	"lua.hpp"
+	<thread>
+	<atomic>
+	<string>
+	<vector>
+	<experimental/filesystem>
+
+1538224930 source:/STORAGE/Programming/shivaStorageProjects/ffbx/main.cpp
+	"lua.hpp"
+	"ffbx.h"
+
