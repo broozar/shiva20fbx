@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9290EAC2163D93D00042044 /* extensionFFBX.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C9290EAB2163D93D00042044 /* extensionFFBX.hpp */; };
+		C9290EB02163D93D00042044 /* extensionFFBX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9290EAF2163D93D00042044 /* extensionFFBX.cpp */; };
+		C9290EB82163DA5F00042044 /* ffbx.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9290EB62163DA5F00042044 /* ffbx.mm */; };
+		C9290EB92163DA5F00042044 /* ffbx.h in Headers */ = {isa = PBXBuildFile; fileRef = C9290EB72163DA5F00042044 /* ffbx.h */; };
+		C9290EBC2163DE5400042044 /* libfbxsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9290EBB2163DE5400042044 /* libfbxsdk.a */; };
+		C9290EBE2163DE5900042044 /* liblua52.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9290EBD2163DE5900042044 /* liblua52.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9290EA82163D93D00042044 /* libextensionFFBX.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libextensionFFBX.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9290EAB2163D93D00042044 /* extensionFFBX.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = extensionFFBX.hpp; sourceTree = "<group>"; };
+		C9290EAF2163D93D00042044 /* extensionFFBX.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = extensionFFBX.cpp; sourceTree = "<group>"; };
+		C9290EB62163DA5F00042044 /* ffbx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ffbx.mm; sourceTree = "<group>"; };
+		C9290EB72163DA5F00042044 /* ffbx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffbx.h; sourceTree = "<group>"; };
+		C9290EBB2163DE5400042044 /* libfbxsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfbxsdk.a; path = resources/autodesk/libfbxsdk.a; sourceTree = "<group>"; };
+		C9290EBD2163DE5900042044 /* liblua52.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua52.a; path = resources/lua64/liblua52.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9290EA62163D93D00042044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9290EBE2163DE5900042044 /* liblua52.a in Frameworks */,
+				C9290EBC2163DE5400042044 /* libfbxsdk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9290E9F2163D93D00042044 = {
+			isa = PBXGroup;
+			children = (
+				C9290EAA2163D93D00042044 /* extensionFFBX */,
+				C9290EA92163D93D00042044 /* Products */,
+				C9290EBA2163DE5400042044 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9290EA92163D93D00042044 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9290EA82163D93D00042044 /* libextensionFFBX.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9290EAA2163D93D00042044 /* extensionFFBX */ = {
+			isa = PBXGroup;
+			children = (
+				C9290EB62163DA5F00042044 /* ffbx.mm */,
+				C9290EB72163DA5F00042044 /* ffbx.h */,
+				C9290EAB2163D93D00042044 /* extensionFFBX.hpp */,
+				C9290EAF2163D93D00042044 /* extensionFFBX.cpp */,
+			);
+			path = extensionFFBX;
+			sourceTree = "<group>";
+		};
+		C9290EBA2163DE5400042044 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9290EBD2163DE5900042044 /* liblua52.a */,
+				C9290EBB2163DE5400042044 /* libfbxsdk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C9290EA42163D93D00042044 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9290EB92163DA5F00042044 /* ffbx.h in Headers */,
+				C9290EAC2163D93D00042044 /* extensionFFBX.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C9290EA72163D93D00042044 /* extensionFFBX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9290EB32163D93D00042044 /* Build configuration list for PBXNativeTarget "extensionFFBX" */;
+			buildPhases = (
+				C9290EA42163D93D00042044 /* Headers */,
+				C9290EA52163D93D00042044 /* Sources */,
+				C9290EA62163D93D00042044 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = extensionFFBX;
+			productName = extensionFFBX;
+			productReference = C9290EA82163D93D00042044 /* libextensionFFBX.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9290EA02163D93D00042044 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = trisymphony;
+				TargetAttributes = {
+					C9290EA72163D93D00042044 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = C9290EA32163D93D00042044 /* Build configuration list for PBXProject "extensionFFBX" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C9290E9F2163D93D00042044;
+			productRefGroup = C9290EA92163D93D00042044 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9290EA72163D93D00042044 /* extensionFFBX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9290EA52163D93D00042044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9290EB02163D93D00042044 /* extensionFFBX.cpp in Sources */,
+				C9290EB82163DA5F00042044 /* ffbx.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C9290EB12163D93D00042044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C9290EB22163D93D00042044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C9290EB42163D93D00042044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFP7Q87M24;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/resources/lua64/include\"",
+					"\"$(SRCROOT)/resources/autodesk/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/resources/autodesk",
+					"$(PROJECT_DIR)/resources/lua64",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C9290EB52163D93D00042044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFP7Q87M24;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/resources/lua64/include\"",
+					"\"$(SRCROOT)/resources/autodesk/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/resources/autodesk",
+					"$(PROJECT_DIR)/resources/lua64",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9290EA32163D93D00042044 /* Build configuration list for PBXProject "extensionFFBX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9290EB12163D93D00042044 /* Debug */,
+				C9290EB22163D93D00042044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9290EB32163D93D00042044 /* Build configuration list for PBXNativeTarget "extensionFFBX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9290EB42163D93D00042044 /* Debug */,
+				C9290EB52163D93D00042044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9290EA02163D93D00042044 /* Project object */;
+}

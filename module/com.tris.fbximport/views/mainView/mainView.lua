@@ -589,14 +589,15 @@ function onImportDAE ( )
         job.setProperty ( hImportJob, job.kPropertyImportPrefixItemList, { sModelname .."_" } )
 
         local tbDummy = { job.kImportItemDummy, false }
-        local tbMesh = { job.kImportItemMesh , biShp }
+        local tbMesh = { job.kImportItemMesh , bImpShp }
         local tbCamera = { job.kImportItemCamera , false }
         local tbLight = { job.kImportItemLight , false }
-        local tbMaterial = { job.kImportItemMaterial , biMat }
-        local tbTexture = { job.kImportItemTexture, biTex }
+        local tbMaterial = { job.kImportItemMaterial , bImpMat }
+        local tbTexture = { job.kImportItemTexture, bImpTex }
         local tbSkeleton = { job.kImportItemSkeleton , true }
-        local tbAnimation = { job.kImportItemAnimation , biAni }
-        job.setProperty ( hImportJob, job.kPropertyImportProcessItemList, { true, tbDummy, tbMesh, tbCamera, tbLight, tbMaterial, tbTexture, tbSkeleton, tbAnimation } )
+        local tbAnimation = { job.kImportItemAnimation , bImpAni }
+        --job.setProperty ( hImportJob, job.kPropertyImportProcessItemList, { true, tbDummy, tbMesh, tbCamera, tbLight, tbMaterial, tbTexture, tbSkeleton, tbAnimation } )
+		job.setProperty ( hImportJob, job.kPropertyImportProcessItemList, { false, tbMesh, tbMaterial, tbTexture, tbAnimation } )
 
         job.setProperty ( hImportJob, job.kPropertyImportGlobalTranslation, vConTra )
         job.setProperty ( hImportJob, job.kPropertyImportGlobalRotation, vConRot )

@@ -24,16 +24,18 @@ Contains the full ready-to-use editor module.
 ## File lua52.dll
 Dependency for Windows
 
-# Installation
-For the time being, the module is delivered as separate files. Eventually, there will be a simple STE release.
+# Module installation
+For the time being, the module is delivered as separate files. 
 
 ## Windows
 Copy module/com.tris.fbximport to AppData/Local/ShiVa/Editor/Modules,  
 then put the lua52.dll into the ShiVa 2.0 root directory, next to all the Qt libs
 
 ## Mac
-No mac build available yet. Once there is:  
 Copy module/com.tris.fbximport to ~/Library/Application Support/ShiVa/Editor/Modules
 
 ## Linux
 Copy module/com.tris.fbximport to ~/.shiva/ShiVa/Editor/Modules
+
+# Screenshot
+![alt text](http://somepic.someserver.de/pics/big/328842c53811c77049407d294d99bbd5.png)

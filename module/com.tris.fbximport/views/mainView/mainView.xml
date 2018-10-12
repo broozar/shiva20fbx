@@ -66,7 +66,7 @@
         </collapseContainer>
 
         <!-- IMPORT SETTINGS -->
-        <collapseContainer id="ffbx.section.settings.import" text="3D Model Import settings" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
+        <collapseContainer id="ffbx.section.settings.import" text="3D Model Loading options" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
             <gridLayout marginLeft="20" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:120">
 
                 <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label          text="Material:"  textAlignment="left|vCenter" /></gridLayoutItem>
@@ -91,7 +91,7 @@
         </collapseContainer>
 
         <!-- EXPORT SETTINGS -->
-        <collapseContainer id="ffbx.section.settings.output" text="DAE Export settings" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
+        <collapseContainer id="ffbx.section.settings.output" text="DAE Saving options" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
             <gridLayout marginLeft="20" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:120">
 
                 <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label          text="Material:"  textAlignment="left|vCenter" /></gridLayoutItem>
@@ -116,7 +116,7 @@
         </collapseContainer>
 
         <!-- CONVERSION SETTINGS -->
-        <collapseContainer id="ffbx.section.settings.conversion" text="ShiVa Conversion settings" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
+        <collapseContainer id="ffbx.section.settings.conversion" text="ShiVa Import options" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
             <gridLayout marginLeft="20" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:120">
 
                 <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label          text="Target Profile:"  textAlignment="left|vCenter" /></gridLayoutItem>
