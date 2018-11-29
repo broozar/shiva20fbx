@@ -1,5 +1,0 @@
-<shelf >
-    <shelfSection id="FBX Importer" text="FBX Importer" selected="true">
-        <shelfItem name="Sample" tooltip="Sample" icon="FBX ImporterIcon" file="shelfSample.lua"/>
-    </shelfSection>
-</shelf>

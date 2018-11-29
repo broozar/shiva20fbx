@@ -1,4 +1,4 @@
-<!-- FBX IMPORTER - August 2018 - Felix Caffier -->
+<!-- FBX IMPORTER - November 2018 - Felix Caffier -->
 
 <moduleView id="MainView">
     <boxLayout direction="vertical" spacing="0">
@@ -9,7 +9,7 @@
                 <window hSizePolicy="expanding">
                     <boxLayout direction="horizontal" spacing="4" marginLeft="8" >
 
-                        <pushButton id="ffbx.toolbar.run" icon="Build"      tooltip="Rum import"    drawFocus="false" vSizePolicy="fixed" fixedHeight="20" backgroundStyle="plain"  />
+                        <pushButton id="ffbx.toolbar.run" icon="Build"      tooltip="Run import"    drawFocus="false" vSizePolicy="fixed" fixedHeight="20" backgroundStyle="plain"  />
 
                         <boxLayoutItem type="stretch" />
                     </boxLayout>
@@ -19,7 +19,7 @@
         </window>
 
         <!-- 3D FILE INPUT -->
-        <collapseContainer id="ffbx.section.input" text="Input Files" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed" frameStyle="noFrame">
+        <collapseContainer id="ffbx.section.input" text="Input Files" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
             <gridLayout marginLeft="3" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:137">
 
                 <gridLayoutItem row="1" column="1"  columnSpan="21" rowSpan="10" >
@@ -54,19 +54,16 @@
         <collapseContainer id="ffbx.section.output" text="Output" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
             <gridLayout marginLeft="20" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:120">
                 <!-- FOLDER PATH -->
-                <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label         text="Temporary DAE Folder:"   textAlignment="left|vCenter"/></gridLayoutItem>
+                <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label         text="DAE Output Folder:"   textAlignment="left|vCenter"/></gridLayoutItem>
                 <gridLayoutItem row="1" column="2"  columnSpan="20" ><fileBox       id="ffbx.output.folder.path" type="openDirectory" icon="FolderOpen" iconAlignment="right" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
                 <!-- CLEAR FOLDER -->
                 <gridLayoutItem row="2" column="1"  columnSpan="1"  ><label          text="Clear folder before import:"  textAlignment="left|vCenter" /></gridLayoutItem>
                 <gridLayoutItem row="2" column="2"  columnSpan="20" ><checkBox       id="ffbx.output.folder.clear" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-                <!-- AUTO IMPORT -->
-                <gridLayoutItem row="3" column="1"  columnSpan="1"  ><label          text="Import into ShiVa after conversion:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="3" column="2"  columnSpan="20" ><checkBox       id="ffbx.output.folder.import" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
             </gridLayout>
         </collapseContainer>
 
         <!-- IMPORT SETTINGS -->
-        <collapseContainer id="ffbx.section.settings.import" text="3D Model Loading options" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
+        <collapseContainer id="ffbx.section.settings.import" text="FBX Import/Export Options" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
             <gridLayout marginLeft="20" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:120">
 
                 <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label          text="Material:"  textAlignment="left|vCenter" /></gridLayoutItem>
@@ -75,7 +72,7 @@
                 <gridLayoutItem row="2" column="1"  columnSpan="1"  ><label          text="Texture:"  textAlignment="left|vCenter" /></gridLayoutItem>
                 <gridLayoutItem row="2" column="2"  columnSpan="20" ><checkBox       id="ffbx.import.texture" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
 
-                <gridLayoutItem row="3" column="1"  columnSpan="1"  ><label          text="Links:"  textAlignment="left|vCenter" /></gridLayoutItem>
+                <gridLayoutItem row="3" column="1"  columnSpan="1"  ><label          text="Embed/Link:"  textAlignment="left|vCenter" /></gridLayoutItem>
                 <gridLayoutItem row="3" column="2"  columnSpan="20" ><checkBox       id="ffbx.import.link" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
 
                 <gridLayoutItem row="4" column="1"  columnSpan="1"  ><label          text="Shape:"  textAlignment="left|vCenter" /></gridLayoutItem>
@@ -90,78 +87,6 @@
             </gridLayout>
         </collapseContainer>
 
-        <!-- EXPORT SETTINGS -->
-        <collapseContainer id="ffbx.section.settings.output" text="DAE Saving options" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
-            <gridLayout marginLeft="20" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:120">
-
-                <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label          text="Material:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="1" column="2"  columnSpan="20" ><checkBox       id="ffbx.export.material" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-                <gridLayoutItem row="2" column="1"  columnSpan="1"  ><label          text="Texture:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="2" column="2"  columnSpan="20" ><checkBox       id="ffbx.export.texture" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-                <gridLayoutItem row="3" column="1"  columnSpan="1"  ><label          text="Embed Resources:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="3" column="2"  columnSpan="20" ><checkBox       id="ffbx.export.embed" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-                <gridLayoutItem row="4" column="1"  columnSpan="1"  ><label          text="Shape:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="4" column="2"  columnSpan="20" ><checkBox       id="ffbx.export.shape" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-                <gridLayoutItem row="5" column="1"  columnSpan="1"  ><label          text="Animation:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="5" column="2"  columnSpan="20" ><checkBox       id="ffbx.export.animation" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-                <gridLayoutItem row="6" column="1"  columnSpan="1"  ><label          text="Global:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="6" column="2"  columnSpan="20" ><checkBox       id="ffbx.export.global" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-            </gridLayout>
-        </collapseContainer>
-
-        <!-- CONVERSION SETTINGS -->
-        <collapseContainer id="ffbx.section.settings.conversion" text="ShiVa Import options" collapsed="false" hSizePolicy="expanding" vSizePolicy="fixed">
-            <gridLayout marginLeft="20" marginTop="5" marginRight="10" marginBottom="15" verticalSpacing="5" horizontalSpacing="15" columnMinimumWidth="1:120">
-
-                <gridLayoutItem row="1" column="1"  columnSpan="1"  ><label          text="Target Profile:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="1" column="2"  columnSpan="20" ><comboBox       id="ffbx.convert.target" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-                <gridLayoutItem row="2" column="1"  columnSpan="1"  ><label          text="Swap Y/Z:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="2" column="2"  columnSpan="20" ><comboBox       id="ffbx.convert.swapyz" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-                <gridLayoutItem row="3" column="1"  columnSpan="1"  ><label          text="Global Translation XYZ:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="3" column="2"  columnSpan="1"  ><numberBox      id="ffbx.convert.transX" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="3" column="3"  columnSpan="1"  ><numberBox      id="ffbx.convert.transY" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="3" column="4"  columnSpan="18" ><numberBox      id="ffbx.convert.transZ" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-
-                <gridLayoutItem row="4" column="1"  columnSpan="1"  ><label          text="Global Rotation XYZ:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="4" column="2"  columnSpan="1"  ><numberBox      id="ffbx.convert.rotX" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="4" column="3"  columnSpan="1"  ><numberBox      id="ffbx.convert.rotY" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="4" column="4"  columnSpan="18" ><numberBox      id="ffbx.convert.rotZ" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-
-                <gridLayoutItem row="5" column="1"  columnSpan="1"  ><label          text="Global Prescale:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="5" column="2"  columnSpan="20" ><numberBox      id="ffbx.convert.prescale" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="1.000" precision="3" /></gridLayoutItem>
-
-                <gridLayoutItem row="6" column="1"  columnSpan="1"  ><label          text="Skeleton Translation XYZ:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="6" column="2"  columnSpan="1"  ><numberBox      id="ffbx.convert.transXs" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="6" column="3"  columnSpan="1"  ><numberBox      id="ffbx.convert.transYs" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="6" column="4"  columnSpan="18" ><numberBox      id="ffbx.convert.transZs" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-
-                <gridLayoutItem row="7" column="1"  columnSpan="1"  ><label          text="Skeleton Rotation XYZ:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="7" column="2"  columnSpan="1"  ><numberBox      id="ffbx.convert.rotXs" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="7" column="3"  columnSpan="1"  ><numberBox      id="ffbx.convert.rotYs" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="7" column="4"  columnSpan="18" ><numberBox      id="ffbx.convert.rotZs" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-
-                <gridLayoutItem row="8" column="1"  columnSpan="1"  ><label          text="Skeleton Scale:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="8" column="2"  columnSpan="20" ><numberBox      id="ffbx.convert.skelscale" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="1.000" precision="3" /></gridLayoutItem>
-
-                <gridLayoutItem row="9" column="1"  columnSpan="1"  ><label          text="Animation Rotation XYZ:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="9" column="2"  columnSpan="1"  ><numberBox      id="ffbx.convert.rotXa" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="9" column="3"  columnSpan="1"  ><numberBox      id="ffbx.convert.rotYa" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-                <gridLayoutItem row="9" column="4"  columnSpan="18" ><numberBox      id="ffbx.convert.rotZa" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20"     placeHolderText="0.000" precision="3" /></gridLayoutItem>
-
-                <gridLayoutItem row="10" column="1"  columnSpan="1"  ><label          text="Relative Animation keys:"  textAlignment="left|vCenter" /></gridLayoutItem>
-                <gridLayoutItem row="10" column="2"  columnSpan="20" ><checkBox       id="ffbx.convert.animRelative" vSizePolicy="fixed" hSizePolicy="expanding" fixedHeight="20" /></gridLayoutItem>
-
-            </gridLayout>
-        </collapseContainer>
-
         <!-- spacer below -->
         <boxLayoutItem type="stretch" />
 
@@ -170,7 +95,6 @@
     <!-- INCLUDES -->
     <include file="mainView.lua" />
     <include file="mainViewMenu.xml" />
-    <!--<include file="mainViewWorking.xml" /> -->
 
     <!-- CONNECTS -->
     <connect sender="MainView"                  event="kEventModuleViewInitialized"             handler="onMainViewInit" />

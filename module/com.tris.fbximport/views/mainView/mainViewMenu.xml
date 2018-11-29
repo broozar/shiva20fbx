@@ -7,10 +7,8 @@
         <!-- FILE -->
         <menuItem id="" text="File" type="subMenu" >
             <menu id="mainMenu.file" type="popUp" orientation="vertical" >
-				<menuItem id="mainMenu.file.refresh" text="Refresh target profile list"></menuItem>
                 <menuItem id="mainMenu.file.saveconfig" text="Save configuration"></menuItem>
 				<menuItem id="mainMenu.file.run" text="Run conversion"></menuItem>
-				<menuItem id="mainMenu.file.runDAE" text="Run import from DAE (debugging)"></menuItem>
             </menu>
         </menuItem>
 		
@@ -29,10 +27,8 @@
     <include file="mainViewMenu.lua" />
 
     <!-- CONNECTS -->
-	<connect sender="mainMenu.file.refresh" event="kEventMenuActionTriggered" handler="onRefreshUI" />
 	<connect sender="mainMenu.file.saveconfig" event="kEventMenuActionTriggered" handler="onConfigSave" />
 	<connect sender="mainMenu.file.run" event="kEventMenuActionTriggered" handler="onRunImport" />
-	<connect sender="mainMenu.file.runDAE" event="kEventMenuActionTriggered" handler="onRunImportDAE" />
 	
 	<connect sender="mainMenu.about.fbxlicense" event="kEventMenuActionTriggered" handler="onWebLicenseFBX" />
 	<connect sender="mainMenu.about.urlautodesk" event="kEventMenuActionTriggered" handler="onWebAutodesk" />

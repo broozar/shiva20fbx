@@ -1,2 +1,0 @@
-mount.nfs -o noatime,nodiratime,tcp,hard,intr,rsize=32768,wsize=32768 ftpback-rbx3-304.ovh.net:/export/ftpbackup/ns316558.ip-37-187-129.eu /NFSBACKUP/
-mount --rbind /NFSBACKUP /home/StoneWwW/zz_NFSBACKUPDRIVE

@@ -8,13 +8,6 @@ function onMainViewUpdateMenuFile ( hView, hMenu )
 
 end
 
-function onRefreshUI ( hView, hMenu )
-	
-	log.message ( "Refreshing FFBX module lists..." )
-	refreshTargetList ( )
-
-end
-
 --------------------------------------------------------------------------------
 
 function onWebLicenseFBX ( hView, hMenu )

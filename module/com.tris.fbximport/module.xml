@@ -12,6 +12,4 @@
     <include file="resources/resources.xml"/>
     <include file="views/mainView/mainView.xml" />   
 
-
-    
 </module>
