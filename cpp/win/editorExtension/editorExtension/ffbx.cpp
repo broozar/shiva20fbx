@@ -172,30 +172,26 @@ namespace FFBX {
 			return;
 		}
 
-		// TODO
-		// check if writable
+		// ----------------------------
+		// INIT SDK
+
+		FbxScene* lScene = nullptr;
+		FbxIOSettings* ioSettings = nullptr;
+
+		//The first thing to do is to create the FBX Manager which is the object allocator for almost all the classes in the SDK
+		lSdkManager = FbxManager::Create();
+		if (!lSdkManager) {
+			exitError(errCodes.initialize, "could not initialize FBX manager");
+			return;
+		}
+		std::string lines("-----------------------------\n");
+		std::string pre("Autodesk FBX SDK version ");
+		std::string ver(lSdkManager->GetVersion());
+		sendMsg(msgCodes.msg, (lines + pre + ver).c_str());
 
 		// run for every file name
 		for (const auto & file3d : _sInputFilenames) {
 
-			// ----------------------------
-			// INIT SDK
-
-			FbxScene* lScene = nullptr;
-			FbxIOSettings* ioSettings = nullptr;
-
-			//The first thing to do is to create the FBX Manager which is the object allocator for almost all the classes in the SDK
-			lSdkManager = FbxManager::Create();
-			if (!lSdkManager) {
-				exitError(errCodes.initialize, "could not initialize FBX manager");
-				return;
-			}
-			// else
-			std::string lines("-----------------------------");
-			std::string pre("Autodesk FBX SDK version ");
-			std::string ver(lSdkManager->GetVersion());
-			sendMsg(msgCodes.msg, lines.c_str());
-			sendMsg(msgCodes.msg, (pre + ver).c_str());
 			sendMsg(msgCodes.msg, ("Processing " + file3d).c_str());
 
 			//Create an IOSettings object. This object holds all import/export settings.
@@ -344,13 +340,13 @@ namespace FFBX {
 			// Destroy the exporter.
 			lExporter->Destroy();
 
-
-			// ----------------------------
-			// CLEANUP
-
-			if (lSdkManager) lSdkManager->Destroy();
 		}
 
+		// ----------------------------
+		// CLEANUP
+
+		if (lSdkManager) lSdkManager->Destroy();
+		
 		// signal OK
 		exportOK();
 	}
